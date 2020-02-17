@@ -95,7 +95,7 @@ class CheckSiteTest extends TestCase
             $this->markTestSkipped('Skipping Mobile Google Analytics string check.');
         } else {
             $this->assertStringContainsStringIgnoringCase(self::$_config['GOOGLE_GA_STRING'],
-				self::$_connObj->test_status['mobile_http_response'],
+                self::$_connObj->test_status['mobile_http_response'],
                 'Mobile: ' . self::$_config['DOMAIN'] . "\n" . 'GA String: ' . self::$_config['GOOGLE_GA_STRING'] . "\n"
             );
 
@@ -112,7 +112,7 @@ class CheckSiteTest extends TestCase
     {
         // Optional, it skip tests if this Jenkins variable is set
         if(getenv('SKIP_UNIT_TESTS') == 'true')
-			return array('SKIP_UNIT_TESTS' => true);
+            return array('SKIP_UNIT_TESTS' => true);
         else
             $unittest_config_optional = array('SKIP_UNIT_TESTS' => false);
 
