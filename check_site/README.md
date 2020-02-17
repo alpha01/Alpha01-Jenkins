@@ -2,8 +2,9 @@
 # Simple HTTP PHPUnit Site Check Test
 
 ## Required Environment Variables:
-* DOMAIN
-* GOOGLE_GA_STRING
+* DOMAIN - domain name.
+* GOOGLE_GA_STRING - test string.
+* CONTAINER - container service name.
 
 ## Optional Environment Variables:
 * SKIP_UNIT_TESTS

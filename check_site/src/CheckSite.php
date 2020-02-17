@@ -45,7 +45,8 @@ class CheckSite
             $user_agent = $this->_mobile_ua;
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->_site_config['DOMAIN'] . '/?' . time());
+        curl_setopt($ch, CURLOPT_URL, $this->_site_config['CONTAINER'] . '/?' . time());
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Host: ' . $this->_site_config['DOMAIN']));
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 65);
         curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);
